@@ -1,0 +1,236 @@
+// Стили для детальных страниц (GRID)
+
+$primary: #1e3a8a;
+$primary-light: #2563eb;
+$accent: #10b981;
+$accent-dark: #059669;
+$text-dark: #1f2937;
+$text-gray: #4b5563;
+$text-light: #6b7280;
+$border: #eef2f6;
+$bg-light: #ffffff;
+$bg-gray: #f8fafc;
+$bg-dark: #1f2937;
+$shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+$shadow-hover: 0 12px 24px -8px rgba(0, 0, 0, 0.1);
+$radius-card: 20px;
+$radius-button: 8px;
+$transition: all 0.2s ease;
+
+//  ДЕТАЛЬНАЯ ВАКАНСИЯ 
+.vacancy-detail {
+    margin: 40px 0;
+}
+
+.vacancy-detail-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-bottom: 30px;
+
+    h1 {
+        font-size: 32px;
+        margin-bottom: 12px;
+    }
+}
+
+.vacancy-detail-salary {
+    font-size: 28px;
+    color: $accent;
+    font-weight: 700;
+}
+
+.vacancy-detail-actions {
+    display: flex;
+    gap: 12px;
+}
+
+.btn-large {
+    padding: 12px 32px;
+    font-size: 16px;
+}
+
+//  GRID ДЛЯ ДЕТАЛЬНОЙ СТРАНИЦЫ 
+.vacancy-detail-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 40px;
+}
+
+//  ИНФОРМАЦИОННЫЕ КАРТОЧКИ 
+.info-card {
+    background: white;
+    border-radius: $radius-card;
+    padding: 32px;
+    border: 1px solid $border;
+
+    h3 {
+        font-size: 20px;
+        margin-bottom: 16px;
+    }
+
+    h4 {
+        font-size: 18px;
+        margin: 24px 0 12px;
+    }
+
+    p {
+        color: $text-gray;
+        margin-bottom: 20px;
+        line-height: 1.6;
+    }
+
+    ul {
+        margin-left: 20px;
+        color: $text-gray;
+
+        li {
+            margin-bottom: 8px;
+        }
+    }
+}
+
+.company-info {
+    display: flex;
+    gap: 16px;
+    margin-bottom: 20px;
+}
+
+.company-logo {
+    width: 50px;
+    height: 50px;
+    background: #f3f4f6;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    i {
+        font-size: 24px;
+        color: $primary;
+    }
+}
+
+//  ДЕТАЛЬНАЯ СТРАНИЦА СОИСКАТЕЛЯ 
+.candidate-detail {
+    margin: 40px 0;
+}
+
+.candidate-detail-header {
+    display: flex;
+    gap: 24px;
+    margin-bottom: 32px;
+    flex-wrap: wrap;
+}
+
+.candidate-avatar {
+    width: 100px;
+    height: 100px;
+    background: #f3f4f6;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    i {
+        font-size: 70px;
+        color: $primary;
+    }
+}
+
+.candidate-info {
+    flex: 1;
+
+    h1 {
+        font-size: 28px;
+        margin-bottom: 8px;
+    }
+}
+
+.candidate-title {
+    color: $accent;
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 12px;
+}
+
+.candidate-location,
+.candidate-salary {
+    font-size: 14px;
+    color: $text-light;
+    margin-bottom: 8px;
+}
+
+//  GRID ДЛЯ ДЕТАЛЬНОЙ СТРАНИЦЫ СОИСКАТЕЛЯ 
+.candidate-detail-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 40px;
+}
+
+.experience-item {
+    margin-bottom: 24px;
+}
+
+.experience-date {
+    font-size: 14px;
+    color: $text-light;
+}
+
+.skills-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 16px;
+}
+
+.skill-tag {
+    background: #f3f4f6;
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 13px;
+    color: $text-gray;
+}
+
+//  АДАПТИВНОСТЬ 
+@media (max-width: 992px) {
+    .vacancy-detail-grid,
+    .candidate-detail-grid {
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
+}
+
+@media (max-width: 768px) {
+    .vacancy-detail-header {
+        flex-direction: column;
+    }
+    
+    .vacancy-detail-salary {
+        font-size: 22px;
+    }
+    
+    .vacancy-detail-actions {
+        width: 100%;
+        
+        .button {
+            flex: 1;
+            justify-content: center;
+        }
+    }
+    
+    .candidate-detail-header {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .candidate-avatar {
+        margin: 0 auto;
+    }
+    
+    .info-card {
+        padding: 20px;
+    }
+}

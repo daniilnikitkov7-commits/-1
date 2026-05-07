@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Услуги | JobService</title>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Стили из папки SCSS -->
+    <link rel="stylesheet" href="../SCSS/main.css">
+    <link rel="stylesheet" href="../SCSS/pages.css">
+</head>
+<body>
+    <div class="app">
+        <header class="header">
+            <div class="container header-container">
+                <a href="../Главная.html" class="logo"><i class="fas fa-briefcase"></i><span>Job<span class="logo-accent">Service</span></span></a>
+                <nav class="nav">
+                    <a href="vacancies/catalog.html" class="nav-link">Вакансии</a>
+                    <a href="candidates/catalog.html" class="nav-link">Резюме</a>
+                    <a href="services.html" class="nav-link active">Услуги</a>
+                    <a href="contacts.html" class="nav-link">Контакты</a>
+                </nav>
+                <div class="header-actions">
+                    <a href="cabinet.html" class="button button-outline">Разместить</a>
+                    <a href="cabinet.html" class="button button-primary">Войти</a>
+                </div>
+                <button class="mobile-menu-btn"><i class="fas fa-bars"></i></button>
+            </div>
+        </header>
+
+        <main class="main">
+            <div class="container">
+                <div class="breadcrumbs"><a href="../Главная.html">Главная</a> <i class="fas fa-chevron-right"></i> <span>Услуги</span></div>
+                <div class="page-container">
+                    <div class="page-header">
+                        <h1>Услуги службы занятости</h1>
+                        <p>Полный спектр услуг для соискателей и работодателей</p>
+                    </div>
+                    <div class="services-grid">
+                        <div class="service-card"><div class="service-icon">📝</div><h3>Составление резюме</h3><p>Профессиональная помощь в создании резюме</p></div>
+                        <div class="service-card"><div class="service-icon">🎓</div><h3>Профессиональное обучение</h3><p>Курсы повышения квалификации</p></div>
+                        <div class="service-card"><div class="service-icon">💼</div><h3>Подбор персонала</h3><p>Помощь в поиске сотрудников</p></div>
+                        <div class="service-card"><div class="service-icon">📊</div><h3>Консультации по карьере</h3><p>Индивидуальные консультации</p></div>
+                        <div class="service-card"><div class="service-icon">🏢</div><h3>Ярмарки вакансий</h3><p>Регулярные мероприятия</p></div>
+                        <div class="service-card"><div class="service-icon">💰</div><h3>Субсидии и гранты</h3><p>Господдержка предпринимательства</p></div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <footer class="footer">
+            <div class="container"><div class="footer-bottom"><p>© 2026 JobService. Все права защищены.</p></div></div>
+        </footer>
+    </div>
+    <script src="../js/main.js"></script>
+</body>
+</html>

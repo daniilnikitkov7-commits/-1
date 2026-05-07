@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JobService | Платформа для поиска работы</title>
+    
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Стили (из папки SCSS, где лежат скомпилированные CSS) -->
+    <link rel="stylesheet" href="SCSS/main.css">
+    <link rel="stylesheet" href="SCSS/home.css">
+</head>
+<body>
+    <div class="app">
+        <!-- ШАПКА -->
+        <header class="header">
+            <div class="container header-container">
+                <a href="Главная.html" class="logo">
+    <img src="logo.svg" alt="JobService" width="140" height="32">
+</a>
+                
+                <nav class="nav">
+                    <a href="pages/vacancies/catalog.html" class="nav-link">Вакансии</a>
+                    <a href="pages/candidates/catalog.html" class="nav-link">Резюме</a>
+                    <a href="pages/services.html" class="nav-link">Услуги</a>
+                    <a href="pages/contacts.html" class="nav-link">Контакты</a>
+                </nav>
+                
+                <div class="header-actions">
+                    <a href="pages/cabinet.html" class="button button-outline">
+                        <i class="fas fa-plus"></i> Разместить
+                    </a>
+                    <a href="pages/cabinet.html" class="button button-primary" id="loginBtnHeader">
+                        <i class="fas fa-user"></i> Войти
+                    </a>
+                    <span id="userName" style="display:none;"></span>
+                    <button id="logoutBtn" style="display:none;" class="button button-outline">Выйти</button>
+                </div>
+                
+                <button class="mobile-menu-btn" id="mobileMenuBtn">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </header>
+
+        <main class="main">
+            <!-- HERO СЕКЦИЯ -->
+            <section class="hero-section">
+                <div class="container">
+                    <div class="hero-content">
+                        <h1>Найдите работу мечты</h1>
+                        
+                        <div class="search-form">
+                            <div class="search-input-group">
+                                <i class="fas fa-search"></i>
+                                <input type="text" id="searchKeyword" placeholder="Должность, например: Frontend разработчик">
+                            </div>
+                            <div class="search-input-group">
+                                <i class="fas fa-location-dot"></i>
+                                <select id="searchRegion">
+                                    <option value="">Вся Беларусь</option>
+                                    <option value="Минск">Минск</option>
+                                    <option value="Гомель">Гомель</option>
+                                    <option value="Гродно">Гродно</option>
+                                    <option value="Витебск">Витебск</option>
+                                    <option value="Брест">Брест</option>
+                                </select>
+                            </div>
+                            <button class="button button-search" id="searchBtn">
+                                <i class="fas fa-arrow-right"></i> Найти работу
+                            </button>
+                        </div>
+                        
+                        <div class="hero-stats">
+                            <div class="stat-item">
+                                <span class="stat-number">5,000+</span>
+                                <span class="stat-label">Вакансий</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-number">2,000+</span>
+                                <span class="stat-label">Компаний</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-number">10,000+</span>
+                                <span class="stat-label">Соискателей</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- КАТЕГОРИИ -->
+            <section class="categories-section">
+                <div class="container">
+                    <div class="section-header">
+                        <h2>Популярные категории</h2>
+                        <a href="pages/vacancies/catalog.html" class="link-more">
+                            Все категории <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                    
+                    <div class="categories-grid" id="categoriesGrid">
+                        <div class="category-card" data-category="it">
+                            <div class="category-icon">💻</div>
+                            <div class="category-name">IT и разработка</div>
+                            <div class="category-count">1250 вакансий</div>
+                        </div>
+                        <div class="category-card" data-category="marketing">
+                            <div class="category-icon">📊</div>
+                            <div class="category-name">Маркетинг</div>
+                            <div class="category-count">680 вакансий</div>
+                        </div>
+                        <div class="category-card" data-category="design">
+                            <div class="category-icon">🎨</div>
+                            <div class="category-name">Дизайн</div>
+                            <div class="category-count">420 вакансий</div>
+                        </div>
+                        <div class="category-card" data-category="management">
+                            <div class="category-icon">📋</div>
+                            <div class="category-name">Менеджмент</div>
+                            <div class="category-count">890 вакансий</div>
+                        </div>
+                        <div class="category-card" data-category="construction">
+                            <div class="category-icon">🏗️</div>
+                            <div class="category-name">Строительство</div>
+                            <div class="category-count">320 вакансий</div>
+                        </div>
+                        <div class="category-card" data-category="medicine">
+                            <div class="category-icon">🏥</div>
+                            <div class="category-name">Медицина</div>
+                            <div class="category-count">540 вакансий</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ВАКАНСИИ -->
+            <section class="vacancies-section">
+                <div class="container">
+                    <div class="section-header">
+                        <h2>Свежие вакансии</h2>
+                        <a href="pages/vacancies/catalog.html" class="link-more">
+                            Все вакансии <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                    
+                    <div class="vacancies-grid" id="vacanciesGrid"></div>
+                    
+                    <div class="load-more">
+                        <button class="button button-load-more" id="loadMoreBtn">
+                            <i class="fas fa-redo-alt"></i> Загрузить еще
+                        </button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ПРЕИМУЩЕСТВА -->
+            <section class="features-section">
+                <div class="container">
+                    <div class="section-header">
+                        <h2>Почему JobService</h2>
+                    </div>
+                    
+                    <div class="features-grid">
+                        <div class="feature-card">
+                            <div class="feature-icon">🔍</div>
+                            <h3>Умный поиск</h3>
+                            <p>Находите подходящие вакансии с помощью продвинутых фильтров.</p>
+                        </div>
+                        <div class="feature-card">
+                            <div class="feature-icon">🏢</div>
+                            <h3>Тысячи компаний</h3>
+                            <p>Работайте с лучшими работодателями страны.</p>
+                        </div>
+                        <div class="feature-card">
+                            <div class="feature-icon">🛡️</div>
+                            <h3>Безопасность</h3>
+                            <p>Все компании проходят проверку, ваши данные защищены.</p>
+                        </div>
+                        <div class="feature-card">
+                            <div class="feature-icon">⚡</div>
+                            <h3>Быстрый отклик</h3>
+                            <p>Получайте ответы от работодателей в течение 24 часов.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- ПОДВАЛ -->
+        <footer class="footer">
+            <div class="container">
+                <div class="footer-grid">
+                    <div class="footer-col">
+                        <div class="footer-logo">
+                            <i class="fas fa-briefcase"></i>
+                            <span>JobService</span>
+                        </div>
+                        <p>Платформа для поиска работы и подбора персонала.</p>
+                    </div>
+                    <div class="footer-col">
+                        <h4>Соискателям</h4>
+                        <ul>
+                            <li><a href="pages/vacancies/catalog.html">Поиск вакансий</a></li>
+                            <li><a href="pages/candidates/catalog.html">Создать резюме</a></li>
+                            <li><a href="pages/services.html">Советы по карьере</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h4>Работодателям</h4>
+                        <ul>
+                            <li><a href="pages/cabinet.html">Разместить вакансию</a></li>
+                            <li><a href="pages/candidates/catalog.html">Поиск резюме</a></li>
+                            <li><a href="#">Тарифы</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h4>Информация</h4>
+                        <ul>
+                            <li><a href="pages/about.html">О проекте</a></li>
+                            <li><a href="pages/contacts.html">Контакты</a></li>
+                            <li><a href="pages/privacy.html">Политика конфиденциальности</a></li>
+                            <li><a href="pages/rules.html">Правила пользования</a></li>
+                            <li><a href="pages/feedback.html">Обратная связь</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="footer-bottom">
+                    <p>© 2026 JobService. Все права защищены.</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

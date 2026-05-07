@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Личный кабинет | JobService</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Стили из папки SCSS -->
+    <link rel="stylesheet" href="../SCSS/main.css">
+    <link rel="stylesheet" href="../SCSS/cabinet.css">
+</head>
+<body>
+    <div class="app">
+        <header class="header">
+            <div class="container header-container">
+                    <a href="../Главная.html" class="logo">
+                         <img src="../logo.svg" alt="JobService" width="140" height="32">
+                    </a>                <nav class="nav">
+                    <a href="vacancies/catalog.html" class="nav-link">Вакансии</a>
+                    <a href="candidates/catalog.html" class="nav-link">Резюме</a>
+                    <a href="services.html" class="nav-link">Услуги</a>
+                    <a href="contacts.html" class="nav-link">Контакты</a>
+                </nav>
+                <div class="header-actions">
+                    <span id="userName"><i class="fas fa-user"></i> Иван Петров</span>
+                    <button id="logoutBtn" class="button button-outline">Выйти</button>
+                </div>
+                <button class="mobile-menu-btn"><i class="fas fa-bars"></i></button>
+            </div>
+        </header>
+
+        <main class="cabinet-wrapper">
+            <div class="container">
+                <div class="cabinet-dashboard">
+                    <aside class="cabinet-sidebar">
+                        <div class="user-card">
+                            <div class="user-avatar"><i class="fas fa-user-circle"></i></div>
+                            <h3>Иван Петров</h3>
+                            <p>ivan@mail.ru</p>
+                            <span class="user-role">Соискатель</span>
+                        </div>
+                        <ul class="sidebar-menu">
+                            <li><a href="#" class="active"><i class="fas fa-tachometer-alt"></i> Обзор</a></li>
+                            <li><a href="#"><i class="fas fa-file-alt"></i> Мои резюме</a></li>
+                            <li><a href="#"><i class="fas fa-briefcase"></i> Отклики</a></li>
+                            <li><a href="#"><i class="fas fa-bookmark"></i> Сохраненные</a></li>
+                            <li><a href="#"><i class="fas fa-cog"></i> Настройки</a></li>
+                        </ul>
+                    </aside>
+                    <div class="cabinet-content">
+                        <div class="content-header">
+                            <h2>Добро пожаловать, Иван!</h2>
+                            <a href="vacancies/catalog.html" class="button button-primary"><i class="fas fa-search"></i> Найти работу</a>
+                        </div>
+                        <div class="stats-cards">
+                            <div class="stat-item"><div class="stat-value">12</div><div class="stat-label">Откликов</div></div>
+                            <div class="stat-item"><div class="stat-value">3</div><div class="stat-label">Просмотров резюме</div></div>
+                            <div class="stat-item"><div class="stat-value">5</div><div class="stat-label">Сохраненных вакансий</div></div>
+                        </div>
+                        <div style="margin-bottom: 32px;">
+                            <h3 style="margin-bottom: 16px;">Мои резюме</h3>
+                            <div class="vacancy-card" style="margin-bottom: 12px;">
+                                <div class="vacancy-header"><div class="vacancy-title">Frontend Developer</div><div class="vacancy-salary">2000 $</div></div>
+                                <div class="vacancy-company"><i class="fas fa-building"></i> Ожидает рассмотрения</div>
+                                <div class="vacancy-tags"><span class="tag">React</span><span class="tag">TypeScript</span></div>
+                            </div>
+                            <a href="#" class="button button-outline" style="width:100%;justify-content:center;"><i class="fas fa-plus"></i> Добавить резюме</a>
+                        </div>
+                        <h3 style="margin-bottom: 16px;">Рекомендуемые вакансии</h3>
+                        <div class="vacancy-card">
+                            <div class="vacancy-header"><div class="vacancy-title">Senior Frontend разработчик</div><div class="vacancy-salary">2500 - 3500 $</div></div>
+                            <div class="vacancy-company"><i class="fas fa-building"></i> IT-Компания</div>
+                            <div class="vacancy-location"><i class="fas fa-map-marker-alt"></i> Минск</div>
+                            <button class="button button-primary" style="margin-top:12px;width:100%;"><i class="fas fa-paper-plane"></i> Откликнуться</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <footer class="footer">
+            <div class="container"><div class="footer-bottom"><p>© 2026 JobService. Все права защищены.</p></div></div>
+        </footer>
+    </div>
+    <script src="../js/main.js"></script>
+</body>
+</html>

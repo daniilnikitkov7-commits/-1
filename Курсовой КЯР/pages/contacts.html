@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Контакты | JobService</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../SCSS/main.css">
+    <link rel="stylesheet" href="../SCSS/pages.css">
+    <link rel="stylesheet" href="../SCSS/contacts.css">
+</head>
+<body>
+    <div class="app">
+        <header class="header">
+            <div class="container header-container">
+                 <a href="../Главная.html" class="logo">
+                    <img src="../logo.svg" alt="JobService" width="140" height="32">
+                 </a>                <nav class="nav">
+                    <a href="vacancies/catalog.html" class="nav-link">Вакансии</a>
+                    <a href="candidates/catalog.html" class="nav-link">Резюме</a>
+                    <a href="services.html" class="nav-link">Услуги</a>
+                    <a href="contacts.html" class="nav-link active">Контакты</a>
+                </nav>
+                <div class="header-actions">
+                    <a href="cabinet.html" class="button button-outline"><i class="fas fa-plus"></i> Разместить</a>
+                    <a href="cabinet.html" class="button button-primary"><i class="fas fa-user"></i> Войти</a>
+                </div>
+                <button class="mobile-menu-btn"><i class="fas fa-bars"></i></button>
+            </div>
+        </header>
+
+        <main class="main">
+            <div class="contacts-page">
+                <div class="breadcrumbs">
+                    <a href="../Главная.html">Главная</a> <i class="fas fa-chevron-right"></i>
+                    <span>Контакты</span>
+                </div>
+
+                <h1 style="font-size: 36px; margin-bottom: 8px;">Контакты</h1>
+                <p style="color: #6b7280; margin-bottom: 40px;">Свяжитесь с нами любым удобным способом</p>
+
+                <div class="contacts-grid">
+                    <!-- Контактная информация -->
+                    <div class="contact-card">
+                        <h2>Свяжитесь с нами</h2>
+                        
+                        <div class="contact-item">
+                            <div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div>
+                            <div class="contact-text">
+                                <h4>Адрес</h4>
+                                <p>г. Минск, пр-т Независимости, 58<br>Бизнес-центр "Победа", офис 505</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <div class="contact-icon"><i class="fas fa-phone-alt"></i></div>
+                            <div class="contact-text">
+                                <h4>Телефоны</h4>
+                                <p>+375 (17) 123-45-67<br>+375 (29) 123-45-67</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+                            <div class="contact-text">
+                                <h4>Email</h4>
+                                <p>info@jobservice.by<br>support@jobservice.by</p>
+                            </div>
+                        </div>
+                        
+                        <div class="work-hours">
+                            <h3><i class="fas fa-clock"></i> График работы</h3>
+                            <p><span>Понедельник - Пятница:</span> <span>9:00 - 18:00</span></p>
+                            <p><span>Суббота:</span> <span>10:00 - 15:00</span></p>
+                            <p><span>Воскресенье:</span> <span>Выходной</span></p>
+                        </div>
+                    </div>
+
+                    <!-- Карта -->
+                    <div class="contact-card">
+                        <h2>Мы на карте</h2>
+                        <div class="map-card">
+                            <iframe 
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4699.61200166412!2d27.58217498517499!3d53.91742318769951!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46dbce4a35eb0389%3A0x6fc398ba3272a7de!2z0J7QntCeICLQktCY0JDQmy3QmtCQ0KEt0JHQldCbIi4g0J_RgNC-0LPRgNCw0LzQvNC90YvQtSDQutCw0YHRgdCLLg!5e0!3m2!1sru!2sby!4v1777803317211!5m2!1sru!2sby" 
+                                width="100%" 
+                                height="400" 
+                                style="border:0;" 
+                                allowfullscreen="" 
+                                loading="lazy" 
+                                referrerpolicy="no-referrer-when-downgrade">
+                            </iframe>
+                        </div>
+                        <p style="margin-top: 16px; font-size: 14px; color: #6b7280; text-align: center;">
+                            <i class="fas fa-subway"></i> Станция метро "Площадь Победы"
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <footer class="footer">
+            <div class="container">
+                <div class="footer-grid">
+                    <div class="footer-col">
+                        <div class="footer-logo"><i class="fas fa-briefcase"></i><span>JobService</span></div>
+                        <p>Платформа для поиска работы и подбора персонала.</p>
+                    </div>
+                    <div class="footer-col">
+                        <h4>Соискателям</h4>
+                        <ul><li><a href="vacancies/catalog.html">Поиск вакансий</a></li>
+                            <li><a href="candidates/catalog.html">Создать резюме</a></li>
+                            <li><a href="services.html">Советы по карьере</a></li></ul>
+                    </div>
+                    <div class="footer-col">
+                        <h4>Работодателям</h4>
+                        <ul><li><a href="cabinet.html">Разместить вакансию</a></li>
+                            <li><a href="candidates/catalog.html">Поиск резюме</a></li>
+                            <li><a href="#">Тарифы</a></li></ul>
+                    </div>
+                    <div class="footer-col">
+                        <h4>Информация</h4>
+                        <ul><li><a href="../pages/about.html">О проекте</a></li>
+                        <li><a href="../pages/contacts.html">Контакты</a></li>
+                        <li><a href="../pages/privacy.html">Политика конфиденциальности</a></li>
+                        <li><a href="../pages/rules.html">Правила пользования</a></li>
+                        <li><a href="../pages/feedback.html">Обратная связь</a></li></ul>
+                    </div>
+                </div>
+                <div class="footer-bottom"><p>© 2026 JobService. Все права защищены.</p></div>
+            </div>
+        </footer>
+    </div>
+    <script src="../js/main.js"></script>
+</body>
+</html>

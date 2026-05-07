@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Каталог соискателей | JobService</title>
+    
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="../../SCSS/main.css">
+    <link rel="stylesheet" href="../../SCSS/catalog.css">
+</head>
+<body>
+    <div class="app">
+        <header class="header">
+            <div class="container header-container">
+                <a href="../../Главная.html" class="logo">
+                    <img src="../../logo.svg" alt="JobService" width="140" height="32">
+                </a>
+                <nav class="nav">
+                    <a href="../vacancies/catalog.html" class="nav-link">Вакансии</a>
+                    <a href="catalog.html" class="nav-link active">Резюме</a>
+                    <a href="../services.html" class="nav-link">Услуги</a>
+                    <a href="../contacts.html" class="nav-link">Контакты</a>
+                </nav>
+                <div class="header-actions">
+                    <a href="../cabinet.html" class="button button-outline"><i class="fas fa-plus"></i> Разместить</a>
+                    <a href="../cabinet.html" class="button button-primary"><i class="fas fa-user"></i> Войти</a>
+                </div>
+                <button class="mobile-menu-btn"><i class="fas fa-bars"></i></button>
+            </div>
+        </header>
+
+        <main class="main">
+            <div class="container">
+                <div class="breadcrumbs">
+                    <a href="../../Главная.html">Главная</a> <i class="fas fa-chevron-right"></i>
+                    <span>Соискатели</span>
+                </div>
+                
+                <div class="catalog-layout">
+                    <aside class="filters-sidebar">
+                        <h3><i class="fas fa-users"></i> Поиск сотрудников</h3>
+                        <div class="filter-group">
+                            <label>Специализация</label>
+                            <select id="filterSpec">
+                                <option value="">Все</option>
+                                <option value="frontend">Frontend Developer</option>
+                                <option value="java">Java Developer</option>
+                                <option value="design">UX/UI Designer</option>
+                                <option value="pm">Product Manager</option>
+                                <option value="marketing">Маркетолог</option>
+                            </select>
+                        </div>
+                        <div class="filter-group">
+                            <label>Опыт работы</label>
+                            <select id="filterExp">
+                                <option value="">Любой</option>
+                                <option value="3">1-3 года</option>
+                                <option value="5">3-6 лет</option>
+                                <option value="6">Более 6 лет</option>
+                            </select>
+                        </div>
+                        <button class="button button-primary button-block" id="applyFilters">
+                            <i class="fas fa-search"></i> Найти сотрудников
+                        </button>
+                        <button class="button button-outline button-block" id="resetFilters" style="margin-top: 12px;">
+                            <i class="fas fa-undo-alt"></i> Сбросить
+                        </button>
+                    </aside>
+                    
+                    <div class="catalog-content">
+                        <div class="catalog-header">
+                            <h1>Соискатели</h1>
+                            <div class="vacancies-count" id="candidatesCount">
+                                <i class="fas fa-users"></i> Найдено: 5 резюме
+                            </div>
+                        </div>
+                        <div class="candidates-grid" id="candidatesGrid"></div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <footer class="footer">
+            <div class="container">
+                <div class="footer-grid">
+                    <div class="footer-col">
+                        <div class="footer-logo"><i class="fas fa-briefcase"></i><span>JobService</span></div>
+                        <p>Платформа для поиска работы и подбора персонала.</p>
+                    </div>
+                    <div class="footer-col">
+                        <h4>Соискателям</h4>
+                        <ul><li><a href="../vacancies/catalog.html">Поиск вакансий</a></li>
+                            <li><a href="catalog.html">Создать резюме</a></li>
+                            <li><a href="../services.html">Советы по карьере</a></li></ul>
+                    </div>
+                    <div class="footer-col">
+                        <h4>Работодателям</h4>
+                        <ul><li><a href="../cabinet.html">Разместить вакансию</a></li>
+                            <li><a href="catalog.html">Поиск резюме</a></li>
+                            <li><a href="#">Тарифы</a></li></ul>
+                    </div>
+                    <div class="footer-col">
+                        <h4>Информация</h4>
+                        <ul><li><a href="../../pages/about.html">О проекте</a></li>
+                        <li><a href="../../pages/contacts.html">Контакты</a></li>
+                        <li><a href="../../pages/privacy.html">Политика конфиденциальности</a></li>
+                        <li><a href="../../pages/rules.html">Правила пользования</a></li>
+                        <li><a href="../../pages/feedback.html">Обратная связь</a></li></ul>
+                    </div>
+                </div>
+                <div class="footer-bottom"><p>© 2026 JobService. Все права защищены.</p></div>
+            </div>
+        </footer>
+    </div>
+    
+    <script src="../../js/main.js"></script>
+    <script src="../../js/catalogc.js"></script>
+</body>
+</html>

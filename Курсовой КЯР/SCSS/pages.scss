@@ -1,0 +1,223 @@
+// Стили для информационных страниц (GRID)
+
+$primary: #1e3a8a;
+$primary-light: #2563eb;
+$accent: #10b981;
+$accent-dark: #059669;
+$text-dark: #1f2937;
+$text-gray: #4b5563;
+$text-light: #6b7280;
+$border: #eef2f6;
+$bg-light: #ffffff;
+$bg-gray: #f8fafc;
+$bg-dark: #1f2937;
+$shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+$shadow-hover: 0 12px 24px -8px rgba(0, 0, 0, 0.1);
+$radius-card: 20px;
+$radius-button: 8px;
+$transition: all 0.2s ease;
+
+//  ОБЩИЕ СТИЛИ ДЛЯ СТРАНИЦ 
+.page-container {
+    max-width: 800px;
+    margin: 60px auto;
+    padding: 0 20px;
+}
+
+.page-header {
+    text-align: center;
+    margin-bottom: 40px;
+
+    h1 {
+        font-size: 36px;
+        margin-bottom: 16px;
+    }
+
+    p {
+        color: $text-light;
+        font-size: 18px;
+    }
+}
+
+//  СТРАНИЦА УСЛУГ (GRID) 
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin-top: 48px;
+}
+
+.service-card {
+    background: white;
+    border-radius: $radius-card;
+    padding: 32px 24px;
+    text-align: center;
+    border: 1px solid $border;
+    transition: $transition;
+
+    &:hover {
+        transform: translateY(-4px);
+        box-shadow: $shadow-hover;
+    }
+}
+
+.service-icon {
+    font-size: 48px;
+    margin-bottom: 16px;
+}
+
+.service-card h3 {
+    margin-bottom: 12px;
+}
+
+.service-card p {
+    color: $text-light;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+//  СТРАНИЦА КОНТАКТОВ (GRID) 
+.contacts-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    margin: 40px 0;
+}
+
+.contacts-info {
+    h3 {
+        margin: 30px 0 16px;
+        
+        &:first-child {
+            margin-top: 0;
+        }
+    }
+    
+    p {
+        color: $text-gray;
+        margin-bottom: 8px;
+        
+        i {
+            width: 24px;
+            color: $primary;
+        }
+    }
+}
+
+.map-card {
+    background: #f3f4f6;
+    border-radius: $radius-card;
+    padding: 40px;
+    text-align: center;
+    
+    i {
+        font-size: 48px;
+        color: $primary;
+        margin-bottom: 16px;
+    }
+    
+    p {
+        color: $text-light;
+        margin-top: 16px;
+    }
+}
+
+//  СТРАНИЦА О ПРОЕКТЕ (GRID) 
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    text-align: center;
+    margin: 40px 0;
+}
+
+.stat-card {
+    text-align: center;
+    
+    .stat-number {
+        font-size: 32px;
+        font-weight: 700;
+        color: $primary;
+    }
+    
+    .stat-label {
+        color: $text-light;
+        font-size: 14px;
+    }
+}
+
+//  СТРАНИЦА 404 
+.error-page {
+    text-align: center;
+    margin: 100px 0;
+}
+
+.error-code {
+    font-size: 120px;
+    font-weight: 700;
+    color: #e5e7eb;
+    margin-bottom: 20px;
+}
+
+.error-page h1 {
+    font-size: 36px;
+    margin-bottom: 16px;
+}
+
+.error-page p {
+    font-size: 18px;
+    color: $text-light;
+    margin-bottom: 32px;
+}
+
+//  ФОРМА ОБРАТНОЙ СВЯЗИ 
+.feedback-form {
+    background: white;
+    border-radius: $radius-card;
+    padding: 32px;
+    border: 1px solid $border;
+    
+    textarea {
+        resize: vertical;
+        min-height: 120px;
+    }
+}
+
+//  АДАПТИВНОСТЬ 
+@media (max-width: 992px) {
+    .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .contacts-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+}
+
+@media (max-width: 768px) {
+    .page-container {
+        margin: 40px auto;
+    }
+    
+    .page-header h1 {
+        font-size: 28px;
+    }
+    
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .stats-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .error-code {
+        font-size: 80px;
+    }
+    
+    .error-page h1 {
+        font-size: 28px;
+    }
+}

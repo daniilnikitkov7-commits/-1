@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<users>
+    <user>
+        <login>ivan@mail.ru</login>
+        <password>123</password>
+        <name>Иван Петров</name>
+        <role>jobseeker</role>
+    </user>
+    <user>
+        <login>admin@jobservice.by</login>
+        <password>admin</password>
+        <name>Администратор</name>
+        <role>admin</role>
+    </user>
+</users>
